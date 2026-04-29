@@ -1,7 +1,8 @@
 # SQL & ETL Projects — Gitansh Kumar
 
-Database Developer with 1+ year of production experience building 
-ETL pipelines, optimizing SQL systems, and automating data workflows.
+Database Developer with 1+ year of production experience 
+building ETL pipelines, optimizing SQL systems, and 
+automating data workflows across multiple database servers.
 
 ## Tech Stack
 - SQL Server & T-SQL
@@ -9,17 +10,23 @@ ETL pipelines, optimizing SQL systems, and automating data workflows.
 - SQL Server Agent
 - Stored Procedures, Views, Functions
 - ETL Design & Pipeline Architecture
+- Hash-Based Change Detection
 - AWS Cloud Practitioner Certified
 
-## What's in this repo
-Real-world SQL and ETL patterns I work with daily — 
-sanitized and documented for portfolio purposes.
-
 ## Projects
-- **Reporting Server Migration** — ETL pipeline architecture 
-  for migrating production data to a dedicated reporting server
-- **SQL Optimization Patterns** — Stored procedures and query 
-  optimization techniques used in production
+
+### 1. Hash-Based Incremental Load Pattern
+**File:** `hash_based_merge_incremental_load.sql`
+
+A production-grade incremental load pattern using:
+- Hash value comparison to detect changed records
+- MERGE statement for upsert operations
+- OUTPUT clause to track inserts vs updates
+- Row count monitoring before and after load
+
+This pattern eliminates full table reloads by only 
+processing new or changed records — significantly 
+reducing pipeline run time and server load.
 
 ## Connect
 - LinkedIn: linkedin.com/in/gitansh-kumar28
